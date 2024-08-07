@@ -19,7 +19,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-model = YOLO("/Users/srikar/pytorch-test/yolov8/runs/segment/train2/weights/best.pt")  # Load your model
+model = YOLO("best.pt")  # Load your model
 
 def process_image(image):
     detections = model.predict(image)
